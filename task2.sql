@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2024 at 03:13 PM
+-- Generation Time: Oct 09, 2024 at 03:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,7 +59,7 @@ CREATE TABLE `employee` (
   `salary` varchar(255) NOT NULL,
   `startedAt` date NOT NULL DEFAULT current_timestamp(),
   `status` varchar(255) NOT NULL DEFAULT 'continue ',
-  `DepartmentId` int(11) NOT NULL,
+  `DepartmentId` int(11) DEFAULT NULL,
   `Role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -68,9 +68,13 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`EmployeeId`, `EmployeeName`, `EmployeeEmail`, `EmployeePassword`, `salary`, `startedAt`, `status`, `DepartmentId`, `Role`) VALUES
-(53, 'tarek', 'tarek', 'tarek', '21', '2024-10-08', 'continue', 26, 3),
-(54, 'badr', 'badr', 'badr', '12131', '2024-10-08', 'continue', 25, 2),
-(56, 'tarek', 'mohamedtarekbadr047@gmail.com', '$2y$10$bw.BrTR8upnA/x.vv/HotO.EG2SQ8kBg8nhJUb85V2Xpg6sVKFBxi', '', '2024-10-08', 'continue', 25, 3);
+(53, 'shehab serry', 'tarek', 'tarek', '21', '2024-10-08', 'continue', 26, 3),
+(54, 'farah yasser', 'badr', 'badr', '12131', '2024-10-08', 'continue', 25, 2),
+(56, 'Mohamed Tarek', 'mohamedtarekbadr047@gmail.com', '$2y$10$bw.BrTR8upnA/x.vv/HotO.EG2SQ8kBg8nhJUb85V2Xpg6sVKFBxi', '70000', '2024-10-08', 'continue', NULL, 1),
+(57, 'salma mohamed', 'tarek', 'tarek', '21', '2024-10-08', 'continue', 26, 3),
+(58, 'sarah shendy', 'badr', 'badr', '12131', '2024-10-08', 'continue', 25, 2),
+(59, 'bushra hazem', 'tarek', 'tarek', '21', '2024-10-08', 'continue', 26, 3),
+(60, 'rawan ezzat', 'badr', 'badr', '12131', '2024-10-08', 'continue', 25, 2);
 
 -- --------------------------------------------------------
 
@@ -131,7 +135,7 @@ ALTER TABLE `department`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `EmployeeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `EmployeeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `role`
